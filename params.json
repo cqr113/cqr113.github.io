@@ -1,6 +1,0 @@
-{
-  "name": "Cqrblog.GitHub.io",
-  "tagline": "blog of CQR",
-  "body": "# cqrblog.github.io\r\nblog of CQR\r\n浮点型变量在计算机内存中占用4字节（Byte）,即32-bit。遵循IEEE-754格式标准。\r\n一个浮点数由2部分组成：底数m 和 指数e。\r\n                         ±mantissa × 2exponent\r\n （注意，公式中的mantissa 和 exponent使用二进制表示）\r\n底数部分　使用２进制数来表示此浮点数的实际值。\r\n指数部分　占用８-bit的二进制数，可表示数值范围为0－255。　但是指数应可正可负，所以IEEE规定，此处算出的次方须减去127才是真正的指数。所以float的指数可从 -126到128.\r\n底数部分实际是占用24-bit的一个值，由于其最高位始终为 1 ，所以最高位省去不存储，在存储中只有23-bit。\r\n到目前为止， 底数部分 23位 加上指数部分 8位 使用了31位。那么前面说过，float是占用4个字节即32-bit,那么还有一位是干嘛用的呢？  还有一位，其实就是4字节中的最高位，用来指示浮点数的正负，当最高位是1时，为负数，最高位是0时，为正数。\r\n   浮点数据就是按下表的格式存储在4个字节中：\r\n     Address+0    Address+1    Address+2    Address+3\r\nContents    SEEE EEEE    EMMM MMMM    MMMM MMMM    MMMM MMMM     S: 表示浮点数正负，1为负数，0为正数\r\n     E: 指数加上127后的值的二进制数\r\n     M: 24-bit的底数（只存储23-bit）\r\n主意：这里有个特例，浮点数 为0时，指数和底数都为0，但此前的公式不成立。因为2的0次方为1，所以，0是个特例。当然，这个特例也不用认为去干扰，编译器会自动去识别。",
-  "note": "Don't delete this file! It's used internally to help with page regeneration."
-}
