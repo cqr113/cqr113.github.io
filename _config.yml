@@ -18,7 +18,7 @@ paginate: 10
 
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
 
-github_username: cqr113
+github_username: luoyan35714
 highlighter: rouge
 
 # Build settings
@@ -28,9 +28,9 @@ FB:
   comments :
     provider : duoshuo
     duoshuo:
-        short_name : cqr113
+        short_name : luoyan35714
     disqus :
-        short_name : CQR
+        short_name : freudkang
     # facebook :
     #   appid : 123
     #   num_posts: 5
